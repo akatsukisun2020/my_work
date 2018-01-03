@@ -27,30 +27,38 @@ GRID::~GRID(){
 }
 
 //TODO 这里要注意的是， 每次读完之后， 要更新offset。
-void GRID::init_grid(){
+int GRID::init_grid(){
   for(int i=0;i<window_size;++i){
     Pulse pulse;
     int tmp;
-    fin>>pulse.time>>pulse.AOA>>pulse.RF>>pulse.PW;
+    fin>>pulse.time>>pulse.AOA>>pulse.RF>>pulse.PW>>pulse.label;
     fin>>tmp; //'\n'
+
+    if(fin.eof()) // 文件末尾
+      return -1;
 
     add_record_to_grid(pulse);
   }
+  return 0;
   //send_grid();  //在真实的网络环境中， 可能要用到send进行发送!
 }
 
-void GRID::update_grid(){
+int GRID::update_grid(){
   for(int i=0;i<delta_k;++i){
     Pulse pulse;
     int tmp;
     fin>>pulse.time>>pulse.AOA>>pulse.RF>>pulse.PW;
     fin>>tmp; //'\n'
 
+    if(fin.eof()) // 文件末尾
+      return -1;
+
     add_record_to_grid(pulse);
   }
+  return 0;
 }
 
-map<vector<int>, Cell> GRID::get_gridinfo(){
+ GRID_TYPE GRID::get_gridinfo(){
   return grid_;
 }
 

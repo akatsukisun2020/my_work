@@ -8,6 +8,8 @@
 #include <fstream>
 #include <unordered_map>
 
+#include "util.h"
+
 using std::vector;
 using std::map;
 using std::queue;
@@ -20,6 +22,7 @@ typedef struct Pulse{
   float AOA;
   float RF;
   float PW;
+  int label; // for test
 } Pulse;
 
 typedef struct Cell{
@@ -30,7 +33,7 @@ typedef struct Cell{
   vector<Pulse> points; // 真实数据
 } Cell;
 
-
+typedef unordered_map<vector<int>, Cell, HashFunc, EqualKey> GRID_TYPE;
 // 超参数配置
 const int DIM = 3;
 const int window_size = 100;
@@ -48,12 +51,12 @@ class GRID{
     ~GRID();
 
     // 最开始的初始化整个网格
-    void init_grid();
+    int init_grid();
     // 后面的更新若干个网格
-    void update_grid();
+    int update_grid();
 
     //void send_grid();
-    unordered_map<vector<int>, Cell> get_gridinfo();
+    GRID_TYPE get_gridinfo();
 
     void add_record_to_grid(const Pulse& record);
     void remove_record_from_grid();
@@ -62,7 +65,7 @@ class GRID{
     string filename_;
     ifstream fin;
 
-    unordered_map<vector<int>, Cell> grid_;
+    GRID_TYPE grid_;
     queue<Pulse> window_;
 };
 

@@ -17,7 +17,7 @@ void merge_vector(vector<int>& array1, vector<int>& array2){
 }
 
 //主要是合并计数count， 与各个点points
-void CLUSTER::merge_grids(unordered_map<vector<int>,Cell>& grid){
+void CLUSTER::merge_grids(GRID_TYPE& grid){
   if(grid.empty())
     return;
 
@@ -226,4 +226,75 @@ int CLUSTER::density_atrribute(Cell& cell){
     return 1;
   else
     return 0;
+}
+
+
+void CLUSTER::print_result(){
+  int total_number = window_size * grid_number;
+  // 统计<cluid+label, count>
+  // <cluid, count>
+  unordered_map<string, int> result;
+  for(auto it=grid_.begin();it != grid_.end();++it){
+    Cell& cell = it->second;
+    if(cell.cluid <= 0)
+      continue;
+
+    string id = to_string(cell.cluid);
+    vector<int>& points = cell.points;
+    for(int i=0;i<points.size();++i){
+      int label = points[i].label;
+      string id_label = id + "_" + to_string(label);
+
+      // 统计改聚类的所有数目
+      auto it_id = result.find(id);
+      if(it_id == result.end()){
+        result.insert(make_pair(id, 1));
+      }
+      else{
+        ++(it_id->second);
+      }
+
+      // 统计一种聚类中， 每种label的所有数目
+      auto it_id_label = result.find(id_label);
+      if(it_id_label == result.end()){
+        result.insert(make_pair(id_label, 1));
+      }
+      else{
+        ++(it_id_label->second);
+      }
+    }
+  }
+
+  // 百分比统计
+  unordered_map<string, int> last_result;
+  for(auto iter=result.begin();iter!=result.end();++iter){
+    string key = iter->first;
+    string::size_type idx = key.find("_");
+    if(idx == string::npos)
+      continue;
+
+    string tmp = key.substr(0, idx);
+    auto it_tmp = last_result.find(tmp);
+    if(it_tmp == last_result.end()){
+      last_result.insert(make_pair(tmp, iter->second));
+    }
+    else{
+      if(it_tmp->second < iter->second)
+        it_tmp->second = iter->second;
+    }
+  }
+
+  cout<<"total_number : "<<total_number<<endl;
+  cout<<endl;
+  for(auto iter=result.begin();iter!=result.end();++iter){
+    cout<<"result -- "<< iter->first<<" : "<<iter->second<<endl;
+  }
+  cout<<endl;
+  for(auto iter=last_result.begin();iter!=last_result.end();++iter){
+    string key = iter->first;
+    float num1 = float(iter->second);
+    float num2 = float(result[key]);
+    cout<<"precent -- "<<key<<" : "<<num1/num2<<endl;
+  }
+  cout<<endl;
 }

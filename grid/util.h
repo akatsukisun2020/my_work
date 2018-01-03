@@ -1,5 +1,6 @@
-#include <iostream>
-#include <unordered_map>
+#ifndef _UTIL_H
+#define _UTIL_H
+
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -28,18 +29,5 @@ struct EqualKey{
   }
 };
 
-int main(){
-  unordered_map<int, int> map1;
-  unordered_map<vector<int>, int, HashFunc, EqualKey> map2;
-  vector<int> arr = {1, 2};
-  vector<int> arr1 = {1, 2, 3};
-  vector<int> arr2 = { 2, 3};
 
-  HashFunc hashfun;
-  cout<<hashfun(arr)<<endl;
-  cout<<hashfun(arr1)<<endl;
-  cout<<hashfun(arr2)<<endl;
-
-  map1.insert(make_pair(1, 2));
-  map2.insert(make_pair(arr, 3));
-}
+#endif
