@@ -34,13 +34,13 @@ typedef struct Cell{
 } Cell;
 
 typedef unordered_map<vector<int>, Cell, HashFunc, EqualKey> GRID_TYPE;
+
+bool operator==(const Pulse& p1, const Pulse& p2);
+
 // 超参数配置
 const int DIM = 3;
-const int window_size = 100;
-const int delta_k = 2; // 每次更新的窗口中的数据
-int CELL_LEN[3] = {4, 4, 4}; //每个子网格的长度
-int UPPERBOUND[3] = {200, 400, 400}; // 数值上界
-int CELL_NUM[3];
+const int window_size = 500;
+const int delta_k = 100; // 每次更新的窗口中的数据
 
 void init_parameters();
 

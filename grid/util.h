@@ -29,5 +29,4 @@ struct EqualKey{
   }
 };
 
-
 #endif

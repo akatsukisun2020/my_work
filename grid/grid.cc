@@ -2,14 +2,24 @@
 #include <iostream>
 #include <cstdio>
 #include <cmath>
+#include <algorithm>
 
 using namespace std;
+
+// 超参数配置
+int CELL_LEN[3] = {4, 4, 4}; //每个子网格的长度
+int UPPERBOUND[3] = {200, 200, 200}; // 数值上界
+int CELL_NUM[3];
 
 void init_parameters(){
   for(int i=0;i<3;++i){
     CELL_NUM[i] = ceil(UPPERBOUND[i] / CELL_LEN[i]);
     UPPERBOUND[i] = CELL_NUM[i] * CELL_LEN[i];
   }
+}
+
+bool operator==(const Pulse& p1, const Pulse& p2){
+  return p1.time==p2.time && p1.AOA==p2.AOA && p1.RF==p2.RF && p1.PW==p2.PW && p1.label==p2.label;
 }
 
 GRID::GRID(){
@@ -101,10 +111,13 @@ void GRID::remove_record_from_grid(){
   auto iter = grid_.find(index);
   if(iter != grid_.end()){
     (iter->second).count--;
-    if(iter->empty())
+    if((iter->second).count == 0)
       grid_.erase(iter);
-    else
-      (iter->second).points.erase(record);
+    else{
+      auto tmp = find((iter->second).points.begin(), (iter->second).points.end(), record);
+      if(tmp != (iter->second).points.end())
+        (iter->second).points.erase(tmp);
+    }
   }
   else{
     cout<<"GRID::remove_record_from_grid error"<<endl;

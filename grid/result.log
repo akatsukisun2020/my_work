@@ -1,0 +1,43 @@
+total_number : 1500
+
+result -- 4 : 519
+result -- 2_0 : 507
+result -- 2 : 507
+result -- 0_2 : 474
+result -- 4_1 : 519
+result -- 0 : 474
+
+precent -- 4 : 1
+precent -- 0 : 1
+precent -- 2 : 1
+
+total_number : 1500
+
+result -- 4_0 : 89
+result -- 4 : 499
+result -- 2_0 : 505
+result -- 0_0 : 119
+result -- 2 : 505
+result -- 0_2 : 380
+result -- 4_1 : 410
+result -- 0 : 499
+
+precent -- 0 : 0.761523
+precent -- 2 : 1
+precent -- 4 : 0.821643
+
+total_number : 1500
+
+result -- 4_0 : 173
+result -- 4 : 469
+result -- 2_0 : 530
+result -- 0_0 : 220
+result -- 2 : 530
+result -- 0_2 : 284
+result -- 4_1 : 296
+result -- 0 : 504
+
+precent -- 0 : 0.563492
+precent -- 2 : 1
+precent -- 4 : 0.63113
+

@@ -1,4 +1,6 @@
 #include "cluster.h"
+#include <iostream>
+using namespace std;
 
 CLUSTER::CLUSTER(){
 
@@ -8,7 +10,7 @@ CLUSTER::~CLUSTER(){
 
 }
 
-void merge_vector(vector<int>& array1, vector<int>& array2){
+void merge_vector(vector<Pulse>& array1, vector<Pulse>& array2){
   if(array2.empty())
     return;
   for(int i=0;i<array2.size();++i){
@@ -37,21 +39,21 @@ void CLUSTER::merge_grids(GRID_TYPE& grid){
 // 并将所有的稀疏网格与噪声网格加入到noise中
 void CLUSTER::bft_grid(Cell& cell, int cluster_id){
   if(density_atrribute(cell) != 0){ //不为稠密网络
-    noise_.insert(cell->id); 
+    noise_.insert(cell.id); 
     return;
   }
 
-  if(cell->cluid != 0) //说明已经被遍历过了的
+  if(cell.cluid != 0) //说明已经被遍历过了的
     return;
 
-  cell->cluid = cluster_id;
+  cell.cluid = cluster_id;
 
   const int delta[6][3] = {{1, 0, 0}, {-1, 0, 0}, {0, 1, 0}, {0, -1, 0}, {0, 0, 1}, {0 ,0, -1}};
   for(int i=0; i<6; ++i){
     vector<int> index(3);
     int flag = 0;
     for(int j=0; j<3; ++j){
-      index[j] = (cell->id)[j] + delta[i][j];
+      index[j] = (cell.id)[j] + delta[i][j];
       if(index[j]<0 || index[j]>=CELL_NUM[j]) //越界
       {
         flag = 1;
@@ -90,7 +92,7 @@ void CLUSTER::deal_noise_cell_1(){
       vector<int> index(3);
       int flag = 0;
       for(int j=0; j<3; ++j){
-        index[j] = (cell->id)[j] + delta[i][j];
+        index[j] = (cell.id)[j] + delta[i][j];
         if(index[j]<0 || index[j]>=CELL_NUM[j]) //越界
         {
           flag = 1;
@@ -141,7 +143,7 @@ void CLUSTER::deal_noise_cell_2(){
       vector<int> index(3);
       int flag = 0;
       for(int j=0; j<3; ++j){
-        index[j] = (cell->id)[j] + delta[i][j];
+        index[j] = (cell.id)[j] + delta[i][j];
         if(index[j]<0 || index[j]>=CELL_NUM[j]) //越界
         {
           flag = 1;
@@ -158,8 +160,8 @@ void CLUSTER::deal_noise_cell_2(){
       }
 
       int key_cluid = cell.cluid;
-      iter = cluid_count.find(key_cluid);
-      if(iter == cluid_count.end() && key_cluid != 0){ //这里要排除周围
+      auto iter1 = cluid_count.find(key_cluid);
+      if(iter1 == cluid_count.end() && key_cluid != 0){ //这里要排除周围
         cluid_count[key_cluid] = 1;
       }
       else{
@@ -202,7 +204,7 @@ void CLUSTER::do_cluster(){
 
 void CLUSTER::get_minPts(){
   if(grid_.empty()) 
-    return -1;
+    return;
   int cell_number = grid_.size();
   int N = 0, max_cell = 0;
 
@@ -236,11 +238,11 @@ void CLUSTER::print_result(){
   unordered_map<string, int> result;
   for(auto it=grid_.begin();it != grid_.end();++it){
     Cell& cell = it->second;
-    if(cell.cluid <= 0)
-      continue;
+//    if(cell.cluid <= 0)
+//      continue;
 
     string id = to_string(cell.cluid);
-    vector<int>& points = cell.points;
+    vector<Pulse>& points = cell.points;
     for(int i=0;i<points.size();++i){
       int label = points[i].label;
       string id_label = id + "_" + to_string(label);
