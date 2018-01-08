@@ -1,0 +1,90 @@
+total_number : 1500
+
+result -- 14_1 : 511
+result -- 14 : 511
+result -- 0_2 : 490
+result -- 0_0 : 499
+result -- 0 : 989
+
+precent -- 0 : 0.50455
+precent -- 14 : 1
+
+minpts ----------- 83
+ grid_index : 19 22 25     count : 48     cluid : 0
+ grid_index : 18 22 28     count : 58     cluid : 0
+ grid_index : 20 15 15     count : 72     cluid : 0
+ grid_index : 18 22 27     count : 79     cluid : 0
+ grid_index : 19 15 16     count : 39     cluid : 0
+ grid_index : 20 15 18     count : 76     cluid : 0
+ grid_index : 19 15 15     count : 63     cluid : 0
+ grid_index : 19 15 18     count : 50     cluid : 0
+ grid_index : 18 22 25     count : 76     cluid : 0
+ grid_index : 18 22 26     count : 59     cluid : 0
+ grid_index : 20 15 16     count : 65     cluid : 0
+ grid_index : 19 15 17     count : 59     cluid : 0
+ grid_index : 19 22 27     count : 56     cluid : 0
+ grid_index : 19 5 35     count : 343     cluid : 14
+ grid_index : 20 15 17     count : 66     cluid : 0
+ grid_index : 19 22 28     count : 62     cluid : 0
+ grid_index : 19 5 36     count : 168     cluid : 14
+ grid_index : 19 22 26     count : 61     cluid : 0
+total_number : 1500
+
+result -- 14_1 : 506
+result -- 14 : 506
+result -- 0_2 : 496
+result -- 0_0 : 501
+result -- 0 : 997
+
+precent -- 0 : 0.502508
+precent -- 14 : 1
+
+minpts ----------- 83
+ grid_index : 19 22 25     count : 51     cluid : 0
+ grid_index : 18 22 28     count : 59     cluid : 0
+ grid_index : 20 15 15     count : 57     cluid : 0
+ grid_index : 18 22 27     count : 77     cluid : 0
+ grid_index : 19 15 16     count : 44     cluid : 0
+ grid_index : 20 15 18     count : 75     cluid : 0
+ grid_index : 19 15 15     count : 75     cluid : 0
+ grid_index : 19 15 18     count : 50     cluid : 0
+ grid_index : 18 22 25     count : 77     cluid : 0
+ grid_index : 18 22 26     count : 58     cluid : 0
+ grid_index : 20 15 16     count : 75     cluid : 0
+ grid_index : 19 15 17     count : 57     cluid : 0
+ grid_index : 19 22 27     count : 57     cluid : 0
+ grid_index : 19 5 35     count : 329     cluid : 14
+ grid_index : 20 15 17     count : 63     cluid : 0
+ grid_index : 19 22 28     count : 63     cluid : 0
+ grid_index : 19 5 36     count : 177     cluid : 14
+ grid_index : 19 22 26     count : 59     cluid : 0
+total_number : 1500
+
+result -- 14_1 : 515
+result -- 14 : 515
+result -- 0_2 : 485
+result -- 0_0 : 503
+result -- 0 : 988
+
+precent -- 0 : 0.509109
+precent -- 14 : 1
+
+minpts ----------- 83
+ grid_index : 19 22 25     count : 55     cluid : 0
+ grid_index : 18 22 28     count : 64     cluid : 0
+ grid_index : 20 15 15     count : 59     cluid : 0
+ grid_index : 18 22 27     count : 77     cluid : 0
+ grid_index : 19 15 16     count : 44     cluid : 0
+ grid_index : 20 15 18     count : 73     cluid : 0
+ grid_index : 19 15 15     count : 68     cluid : 0
+ grid_index : 19 15 18     count : 50     cluid : 0
+ grid_index : 18 22 25     count : 70     cluid : 0
+ grid_index : 18 22 26     count : 60     cluid : 0
+ grid_index : 20 15 16     count : 62     cluid : 0
+ grid_index : 19 15 17     count : 62     cluid : 0
+ grid_index : 19 22 27     count : 56     cluid : 0
+ grid_index : 19 5 35     count : 343     cluid : 14
+ grid_index : 20 15 17     count : 67     cluid : 0
+ grid_index : 19 22 28     count : 57     cluid : 0
+ grid_index : 19 5 36     count : 172     cluid : 14
+ grid_index : 19 22 26     count : 64     cluid : 0

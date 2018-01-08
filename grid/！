@@ -1,9 +1,16 @@
 #include "grid.h"
 #include <iostream>
+#include <sstream>
 #include <cstdio>
 #include <cmath>
+#include <algorithm>
 
 using namespace std;
+
+// 超参数配置
+int CELL_LEN[3] = {2, 2, 2}; //每个子网格的长度
+int UPPERBOUND[3] = {180, 100, 100}; // 数值上界
+int CELL_NUM[3];
 
 void init_parameters(){
   for(int i=0;i<3;++i){
@@ -12,45 +19,73 @@ void init_parameters(){
   }
 }
 
+// 数据预处理函数， 主要是对雷达信号数据做一些类似规范化的操作
+void pre_proccess(Pulse& pulse){
+  pulse.PW *= 10;//脉宽精度 0.1
+  pulse.RF *= 10;
+}
+
+bool operator==(const Pulse& p1, const Pulse& p2){
+  return p1.time==p2.time && p1.AOA==p2.AOA && p1.RF==p2.RF && p1.PW==p2.PW && p1.label==p2.label;
+}
+
 GRID::GRID(){
 
 }
 
-GRID::GRID(const string& name, const int offset):filename_(name){
+// 构造函数中进行流的打开并初始化
+// 析构函数中关闭
+GRID::GRID(const string& name):filename_(name){
   fin.open(filename_.c_str());
 }
 
 GRID::~GRID(){
-
+  fin.close();
 }
 
 //TODO 这里要注意的是， 每次读完之后， 要更新offset。
-void GRID::init_grid(){
+int GRID::init_grid(){
   for(int i=0;i<window_size;++i){
     Pulse pulse;
-    int tmp;
-    fin>>pulse.time>>pulse.AOA>>pulse.RF>>pulse.PW;
-    fin>>tmp; //'\n'
 
+    istringstream istr;
+    string str;
+    getline(fin, str);
+    istr.str(str);
+    istr>>pulse.time>>pulse.AOA>>pulse.RF>>pulse.PW>>pulse.label;
+
+//    cout<<"pulse : "<<pulse.time<<"  "<<pulse.AOA<<"  "<<pulse.RF<<"  "<<
+//      pulse.PW<<"  "<<pulse.label<<endl;
+
+    if(fin.eof()) // 文件末尾
+      return -1;
+
+    pre_proccess(pulse);
     add_record_to_grid(pulse);
   }
-
-  //send_grid();
+  return 0;
+  //send_grid();  //在真实的网络环境中， 可能要用到send进行发送!
 }
 
-void GRID::update_grid(){
-  ifstream fin(filename_.c_str());
+int GRID::update_grid(){
   for(int i=0;i<delta_k;++i){
     Pulse pulse;
-    int tmp;
-    fin>>pulse.time>>pulse.AOA>>pulse.RF>>pulse.PW;
-    fin>>tmp; //'\n'
+    istringstream istr;
+    string str;
+    getline(fin, str);
+    istr.str(str);
+    istr>>pulse.time>>pulse.AOA>>pulse.RF>>pulse.PW>>pulse.label;
 
+    if(fin.eof()) // 文件末尾
+      return -1;
+
+    pre_proccess(pulse);
     add_record_to_grid(pulse);
   }
+  return 0;
 }
 
-map<vector<int>, Cell> GRID::get_gridinfo(){
+ GRID_TYPE GRID::get_gridinfo(){
   return grid_;
 }
 
@@ -93,10 +128,13 @@ void GRID::remove_record_from_grid(){
   auto iter = grid_.find(index);
   if(iter != grid_.end()){
     (iter->second).count--;
-    if(iter->empty())
+    if((iter->second).count == 0)
       grid_.erase(iter);
-    else
-      (iter->second).points.erase(record);
+    else{
+      auto tmp = find((iter->second).points.begin(), (iter->second).points.end(), record);
+      if(tmp != (iter->second).points.end())
+        (iter->second).points.erase(tmp);
+    }
   }
   else{
     cout<<"GRID::remove_record_from_grid error"<<endl;
