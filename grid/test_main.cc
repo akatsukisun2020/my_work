@@ -1,3 +1,4 @@
+#include "merge.h"
 #include "cluster.h"
 #include "grid.h"
 #include <iostream>
@@ -16,32 +17,74 @@ int main(){
   if(grid1.init_grid()==0 &&
     grid2.init_grid()==0 &&
     grid3.init_grid()==0){
-    GRID_TYPE grid_info1 = grid1.get_gridinfo();
-    GRID_TYPE grid_info2 = grid2.get_gridinfo();
-    GRID_TYPE grid_info3 = grid3.get_gridinfo();
+    int size = grid1.get_cell_number() + grid2.get_cell_number() + grid3.get_cell_number();
 
-    CLUSTER cluster;
-    cluster.merge_grids(grid_info1);
-    cluster.merge_grids(grid_info2);
-    cluster.merge_grids(grid_info3);
-    cluster.do_cluster();
-    cluster.print_result();
-    cluster.print_gridinfo();
+    GRID_SHUFFLE_TYPE shuffle1, shuffle2, shuffle3;
+    grid1.shuffle_grid(shuffle1);
+    grid2.shuffle_grid(shuffle2);
+    grid3.shuffle_grid(shuffle3);
+
+    vector<CLUSTER> array(shuffle1.size());
+    for(int i=0;i<array.size();++i){
+      CLUSTER& cluster = array[i];
+      cluster.set_id(i);
+      cluster.merge_grids(shuffle1);
+      cluster.merge_grids(shuffle2);
+      cluster.merge_grids(shuffle3);
+      cluster.reset_cell_number();
+      cluster.add_cell_number(size);
+      cluster.do_cluster();
+    }
+
+    MERGE merge(shuffle1.size());
+    for(int i=0;i<array.size();++i){
+      CLUSTER& cluster = array[i];
+      GRID_TYPE grid = cluster.get_gridinfo();
+      BOUNDARY_TYPE boundary = cluster.get_boundaryinfo();
+      size_t id = cluster.get_id();
+      merge.add_to_window(id, grid, boundary);
+    }
+    merge.do_merge();
+
+    merge.print_result();
+    merge.print_gridinfo();
   }
 
+
+  // 循环读取数据 
   while(grid1.update_grid()==0 &&
     grid2.update_grid()==0 &&
     grid3.update_grid()==0){
-    GRID_TYPE grid_info1 = grid1.get_gridinfo();
-    GRID_TYPE grid_info2 = grid2.get_gridinfo();
-    GRID_TYPE grid_info3 = grid3.get_gridinfo();
+    int size = grid1.get_cell_number() + grid2.get_cell_number() + grid3.get_cell_number();
 
-    CLUSTER cluster;
-    cluster.merge_grids(grid_info1);
-    cluster.merge_grids(grid_info2);
-    cluster.merge_grids(grid_info3);
-    cluster.do_cluster();
-    cluster.print_result();
-    cluster.print_gridinfo();
+    GRID_SHUFFLE_TYPE shuffle1, shuffle2, shuffle3;
+    grid1.shuffle_grid(shuffle1);
+    grid2.shuffle_grid(shuffle2);
+    grid3.shuffle_grid(shuffle3);
+
+    vector<CLUSTER> array(shuffle1.size());
+    for(int i=0;i<array.size();++i){
+      CLUSTER& cluster = array[i];
+      cluster.set_id(i);
+      cluster.merge_grids(shuffle1);
+      cluster.merge_grids(shuffle2);
+      cluster.merge_grids(shuffle3);
+      cluster.reset_cell_number();
+      cluster.add_cell_number(size);
+      cluster.do_cluster();
+    }
+
+    MERGE merge(shuffle1.size());
+    for(int i=0;i<array.size();++i){
+      CLUSTER& cluster = array[i];
+      GRID_TYPE grid = cluster.get_gridinfo();
+      BOUNDARY_TYPE boundary = cluster.get_boundaryinfo();
+      size_t id = cluster.get_id();
+      merge.add_to_window(id, grid, boundary);
+    }
+    merge.do_merge();
+
+    merge.print_result();
+    merge.print_gridinfo();
   }
 }

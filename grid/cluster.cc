@@ -6,6 +6,10 @@ CLUSTER::CLUSTER(){
 
 }
 
+CLUSTER::CLUSTER(int id):id_(id){
+
+}
+
 CLUSTER::~CLUSTER(){
 
 }
@@ -18,19 +22,77 @@ void merge_vector(vector<Pulse>& array1, vector<Pulse>& array2){
   }
 }
 
+void CLUSTER::set_id(int id){
+  id_ = id;
+}
+
+size_t CLUSTER::get_id(){
+  return id_;
+}
+
+void CLUSTER::reset_cell_number(){
+  cell_number_ = 0;
+}
+
+void CLUSTER::add_cell_number(int number){
+  cell_number_ += number;
+}
+
 //主要是合并计数count， 与各个点points
-void CLUSTER::merge_grids(GRID_TYPE& grid){
-  if(grid.empty())
+void CLUSTER::merge_grids(GRID_SHUFFLE_TYPE& shuffle_map){
+  auto it = shuffle_map.find(id_);  //是不是给这个单元的
+  if(it == shuffle_map.end())
     return;
 
-  for(auto it=grid.begin();it!=grid.end();++it){
-    auto iter = grid_.find(it->first);
+  vector<Cell*>& array = it->second;
+  for(int i=0;i<array.size();++i){
+    Cell* cell_ptr = array[i];
+
+    auto iter = grid_.find(cell_ptr->id);
     if(iter == grid_.end()){
-      grid_.insert(make_pair(it->first, it->second));
+      grid_.insert(make_pair(cell_ptr->id, *cell_ptr));
     }
     else{
-      (iter->second).count += (it->second).count;
-      merge_vector((iter->second).points, (it->second).points);
+      (iter->second).count += cell_ptr->count;
+      merge_vector((iter->second).points, cell_ptr->points);
+    }
+  }
+
+ // if(grid.empty())
+ //   return;
+
+ // for(auto it=grid.begin();it!=grid.end();++it){
+ //   auto iter = grid_.find(it->first);
+ //   if(iter == grid_.end()){
+ //     grid_.insert(make_pair(it->first, it->second));
+ //   }
+ //   else{
+ //     (iter->second).count += (it->second).count;
+ //     merge_vector((iter->second).points, (it->second).points);
+ //   }
+ // }
+}
+
+GRID_TYPE CLUSTER::get_gridinfo(){
+  for(auto it=grid_.begin(); it!=grid_.end(); ++it){  //重新构造id， 使得merge的时候， id唯一
+    string cluid = to_string(id_) + "_" + to_string((it->second).cluid);
+    (it->second).cluid = hash<string>()(cluid);
+  }
+  return grid_;
+}
+
+BOUNDARY_TYPE CLUSTER::get_boundaryinfo(){
+  return boundary_;
+}
+
+//产生所有边界网格的集合
+void CLUSTER::generate_boundary(const vector<int>& index){
+  for(int i=0;i<DIM;++i){
+    if(dim_weights[i]!=1 && index[i]!=0 && index[i]%DIM_VALUE[i]==0){  // 边界单元格-条件1
+      boundary_.insert(index);
+    }
+    else if(dim_weights[i]!=1 && index[i]+1<UPPERBOUND[i] && (index[i]+1)%DIM_VALUE[i]==0){ // 边界单元格-条件2
+      boundary_.insert(index);
     }
   }
 }
@@ -45,6 +107,8 @@ void CLUSTER::bft_grid(Cell& cell, int cluster_id){
 
   if(cell.cluid != 0) //说明已经被遍历过了的
     return;
+
+  generate_boundary(cell.id); //对稠密网格进行判定
 
   cell.cluid = cluster_id;
 
@@ -203,20 +267,23 @@ void CLUSTER::do_cluster(){
 }
 
 void CLUSTER::get_minPts(){
-  if(grid_.empty()) 
-    return;
-  int cell_number = grid_.size();
-  int N = 0, max_cell = 0;
+  int N = window_size * grid_number;
+  minpts_ = N/cell_number_;
 
-  for(auto it=grid_.begin();it!=grid_.end();++it){
-    N += (it->second).count;
-    if((it->second).count>max_cell)
-      max_cell = (it->second).count;
-  }
-
-  //minpts_ = (N/cell_number + max_cell)/2;
-  minpts_ = N/cell_number;
-  //minpts_ = 50;
+//  if(grid_.empty()) 
+//    return;
+//  int cell_number = grid_.size();
+//  int N = 0, max_cell = 0;
+//
+//  for(auto it=grid_.begin();it!=grid_.end();++it){
+//    N += (it->second).count;
+//    if((it->second).count>max_cell)
+//      max_cell = (it->second).count;
+//  }
+//
+//  //minpts_ = (N/cell_number + max_cell)/2;
+//  minpts_ = N/cell_number;
+//  //minpts_ = 50;
 }
 
 //判定一个cell是不是稠密的或者稀疏的

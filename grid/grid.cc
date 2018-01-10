@@ -11,11 +11,13 @@ using namespace std;
 int CELL_LEN[3] = {2, 2, 2}; //每个子网格的长度
 int UPPERBOUND[3] = {180, 100, 100}; // 数值上界
 int CELL_NUM[3];
+int DIM_VALUE[3];
 
 void init_parameters(){
   for(int i=0;i<3;++i){
     CELL_NUM[i] = ceil(UPPERBOUND[i] / CELL_LEN[i]);
     UPPERBOUND[i] = CELL_NUM[i] * CELL_LEN[i];
+    DIM_VALUE[i] = floor(UPPERBOUND[i] / dim_weights[i]); // 上层网络分隔
   }
 }
 
@@ -85,8 +87,45 @@ int GRID::update_grid(){
   return 0;
 }
 
- GRID_TYPE GRID::get_gridinfo(){
+GRID_TYPE GRID::get_gridinfo(){
   return grid_;
+}
+
+// 产生顺序编号的id形式 
+int generate_id(vector<int>& key){
+  int result = 0;
+  int value = 1;
+  for(int i=0;i<key.size();++i){
+    result += key[i]*value; //注意先后顺序
+    value *= dim_weights[i];
+  }
+  return result;
+}
+
+//作用是将所有的cell进行按照切分的网格进行归类
+void GRID::shuffle_grid(GRID_SHUFFLE_TYPE& shuffle_map){
+  for(auto it=grid_.begin();it!=grid_.end();++it){
+    vector<int> index(DIM);
+    const vector<int>& key = it->first;
+    for(int i=0;i<DIM;++i){
+      index[i] = ceil(key[i]/DIM_VALUE[i]);
+    }
+    //size_t hash_key = HashFunc()(index); // 这里的hash_key 表示的唯一的局部网格代号
+    int hash_key = generate_id(index); // 这里的hash_key 表示的唯一的局部网格代号
+    auto iter = shuffle_map.find(hash_key);
+    if(iter == shuffle_map.end()){
+      shuffle_map.insert(make_pair(hash_key, vector<Cell*>()));
+    }
+    Cell* cell_ptr = &(it->second);
+    shuffle_map[hash_key].push_back(cell_ptr);
+
+    // 这个iter是null， 所以， 会导致coredump
+    //(iter->second).push_back(cell_ptr);  
+  }
+}
+
+int GRID::get_cell_number()const{
+  return grid_.size();
 }
 
 void GRID::add_record_to_grid(const Pulse& record){

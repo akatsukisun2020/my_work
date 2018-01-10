@@ -1,295 +1,289 @@
-total_number : 1500
+total_number : 1500  grid size : 35
 
-result -- 19_1 : 511
-result -- 9_0 : 489
-result -- 9 : 489
-result -- 19 : 511
-result -- 7_2 : 483
-result -- 7 : 483
-result -- 0_3 : 17
-result -- 0 : 17
+result -- 9403877940718002231_1 : 511
+result -- 9403877940718002231 : 511
+result -- 5832333510364503111_0 : 489
+result -- 1613983195750425517_3 : 17
+result -- 1613983195750425517 : 17
+result -- 5832333510364503111 : 489
+result -- 15350603466033648773_2 : 483
+result -- 15350603466033648773 : 483
 
-precent -- 0 : 1
-precent -- 9 : 1
-precent -- 7 : 1
-precent -- 19 : 1
+precent -- 1613983195750425517 : 1
+precent -- 15350603466033648773 : 1
+precent -- 5832333510364503111 : 1
+precent -- 9403877940718002231 : 1
 
-minpts ----------- 42
- grid_index : 18 18 24     count : 1     cluid : 0
- grid_index : 19 13 24     count : 1     cluid : 0
- grid_index : 20 14 21     count : 1     cluid : 0
- grid_index : 19 21 16     count : 1     cluid : 0
- grid_index : 19 8 27     count : 1     cluid : 0
- grid_index : 19 17 22     count : 1     cluid : 0
- grid_index : 19 15 17     count : 59     cluid : 7
- grid_index : 20 15 16     count : 66     cluid : 7
- grid_index : 18 22 26     count : 57     cluid : 9
- grid_index : 20 12 21     count : 1     cluid : 0
- grid_index : 18 6 16     count : 1     cluid : 0
- grid_index : 18 14 20     count : 1     cluid : 0
- grid_index : 20 15 15     count : 58     cluid : 7
- grid_index : 18 15 19     count : 1     cluid : 0
- grid_index : 20 23 22     count : 1     cluid : 0
- grid_index : 18 22 27     count : 61     cluid : 9
- grid_index : 20 6 31     count : 1     cluid : 0
- grid_index : 19 22 26     count : 53     cluid : 9
- grid_index : 19 5 36     count : 182     cluid : 19
- grid_index : 19 22 28     count : 69     cluid : 9
- grid_index : 18 17 19     count : 1     cluid : 0
- grid_index : 19 5 35     count : 329     cluid : 19
- grid_index : 19 15 18     count : 64     cluid : 7
- grid_index : 19 16 33     count : 1     cluid : 0
- grid_index : 20 24 21     count : 1     cluid : 0
- grid_index : 19 15 15     count : 65     cluid : 7
- grid_index : 18 21 20     count : 1     cluid : 0
- grid_index : 19 22 25     count : 56     cluid : 9
- grid_index : 19 15 16     count : 58     cluid : 7
- grid_index : 20 15 18     count : 49     cluid : 7
- grid_index : 19 22 27     count : 71     cluid : 9
- grid_index : 18 22 28     count : 59     cluid : 9
- grid_index : 18 22 25     count : 63     cluid : 9
- grid_index : 20 23 15     count : 1     cluid : 0
- grid_index : 20 15 17     count : 64     cluid : 7
-total_number : 1500
+ grid_index : 20 15 17     count : 64     cluid : 15350603466033648773
+ grid_index : 20 23 15     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 25     count : 63     cluid : 5832333510364503111
+ grid_index : 18 22 28     count : 59     cluid : 5832333510364503111
+ grid_index : 19 22 27     count : 71     cluid : 5832333510364503111
+ grid_index : 20 15 18     count : 49     cluid : 15350603466033648773
+ grid_index : 19 15 16     count : 58     cluid : 15350603466033648773
+ grid_index : 19 22 25     count : 56     cluid : 5832333510364503111
+ grid_index : 18 21 20     count : 1     cluid : 1613983195750425517
+ grid_index : 19 15 15     count : 65     cluid : 15350603466033648773
+ grid_index : 20 24 21     count : 1     cluid : 1613983195750425517
+ grid_index : 19 16 33     count : 1     cluid : 1613983195750425517
+ grid_index : 19 15 18     count : 64     cluid : 15350603466033648773
+ grid_index : 19 17 22     count : 1     cluid : 1613983195750425517
+ grid_index : 19 8 27     count : 1     cluid : 1613983195750425517
+ grid_index : 18 18 24     count : 1     cluid : 1613983195750425517
+ grid_index : 19 21 16     count : 1     cluid : 1613983195750425517
+ grid_index : 20 14 21     count : 1     cluid : 1613983195750425517
+ grid_index : 19 13 24     count : 1     cluid : 1613983195750425517
+ grid_index : 20 6 31     count : 1     cluid : 1613983195750425517
+ grid_index : 19 22 26     count : 53     cluid : 5832333510364503111
+ grid_index : 19 5 36     count : 182     cluid : 9403877940718002231
+ grid_index : 19 22 28     count : 69     cluid : 5832333510364503111
+ grid_index : 18 22 26     count : 57     cluid : 5832333510364503111
+ grid_index : 20 15 16     count : 66     cluid : 15350603466033648773
+ grid_index : 19 15 17     count : 59     cluid : 15350603466033648773
+ grid_index : 20 12 21     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 15     count : 58     cluid : 15350603466033648773
+ grid_index : 18 14 20     count : 1     cluid : 1613983195750425517
+ grid_index : 18 6 16     count : 1     cluid : 1613983195750425517
+ grid_index : 20 23 22     count : 1     cluid : 1613983195750425517
+ grid_index : 18 15 19     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 27     count : 61     cluid : 5832333510364503111
+ grid_index : 19 5 35     count : 329     cluid : 9403877940718002231
+ grid_index : 18 17 19     count : 1     cluid : 1613983195750425517
+total_number : 1500  grid size : 35
 
-result -- 17_3 : 1
-result -- 17_0 : 500
-result -- 21 : 498
-result -- 17 : 501
-result -- 8_2 : 488
-result -- 21_1 : 498
-result -- 0_3 : 16
-result -- 8 : 488
-result -- 0 : 16
+result -- 86826757976100198_3 : 1
+result -- 5458457760955147521 : 498
+result -- 17769758303514395798_2 : 488
+result -- 5458457760955147521_1 : 498
+result -- 17769758303514395798 : 488
+result -- 1613983195750425517 : 16
+result -- 86826757976100198_0 : 500
+result -- 1613983195750425517_3 : 16
+result -- 86826757976100198 : 501
 
-precent -- 0 : 1
-precent -- 8 : 1
-precent -- 21 : 1
-precent -- 17 : 0.998004
+precent -- 1613983195750425517 : 1
+precent -- 5458457760955147521 : 1
+precent -- 17769758303514395798 : 1
+precent -- 86826757976100198 : 0.998004
 
-minpts ----------- 42
- grid_index : 18 18 24     count : 1     cluid : 0
- grid_index : 19 13 24     count : 1     cluid : 0
- grid_index : 20 14 21     count : 1     cluid : 0
- grid_index : 19 21 16     count : 1     cluid : 0
- grid_index : 19 8 27     count : 1     cluid : 0
- grid_index : 19 17 22     count : 1     cluid : 0
- grid_index : 20 23 15     count : 1     cluid : 0
- grid_index : 20 15 17     count : 60     cluid : 8
- grid_index : 19 15 17     count : 59     cluid : 8
- grid_index : 19 20 32     count : 1     cluid : 0
- grid_index : 20 15 16     count : 63     cluid : 8
- grid_index : 20 12 21     count : 1     cluid : 0
- grid_index : 18 6 16     count : 1     cluid : 0
- grid_index : 20 15 15     count : 66     cluid : 8
- grid_index : 18 15 19     count : 1     cluid : 0
- grid_index : 20 23 22     count : 1     cluid : 0
- grid_index : 18 22 26     count : 54     cluid : 17
- grid_index : 18 22 27     count : 59     cluid : 17
- grid_index : 20 6 31     count : 1     cluid : 0
- grid_index : 19 22 26     count : 62     cluid : 17
- grid_index : 19 5 36     count : 172     cluid : 21
- grid_index : 19 21 27     count : 1     cluid : 17
- grid_index : 19 22 28     count : 67     cluid : 17
- grid_index : 18 17 19     count : 1     cluid : 0
- grid_index : 19 5 35     count : 326     cluid : 21
- grid_index : 19 15 18     count : 72     cluid : 8
- grid_index : 20 24 21     count : 1     cluid : 0
- grid_index : 19 15 15     count : 62     cluid : 8
- grid_index : 19 22 25     count : 56     cluid : 17
- grid_index : 19 15 16     count : 61     cluid : 8
- grid_index : 20 15 18     count : 45     cluid : 8
- grid_index : 19 5 25     count : 1     cluid : 0
- grid_index : 19 22 27     count : 74     cluid : 17
- grid_index : 18 22 28     count : 60     cluid : 17
- grid_index : 18 22 25     count : 68     cluid : 17
-total_number : 1500
+ grid_index : 18 22 25     count : 68     cluid : 86826757976100198
+ grid_index : 18 22 28     count : 60     cluid : 86826757976100198
+ grid_index : 19 22 27     count : 74     cluid : 86826757976100198
+ grid_index : 19 5 25     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 18     count : 45     cluid : 17769758303514395798
+ grid_index : 19 15 16     count : 61     cluid : 17769758303514395798
+ grid_index : 19 22 25     count : 56     cluid : 86826757976100198
+ grid_index : 19 15 15     count : 62     cluid : 17769758303514395798
+ grid_index : 20 24 21     count : 1     cluid : 1613983195750425517
+ grid_index : 19 15 18     count : 72     cluid : 17769758303514395798
+ grid_index : 19 5 35     count : 326     cluid : 5458457760955147521
+ grid_index : 18 17 19     count : 1     cluid : 1613983195750425517
+ grid_index : 18 18 24     count : 1     cluid : 1613983195750425517
+ grid_index : 19 17 22     count : 1     cluid : 1613983195750425517
+ grid_index : 19 8 27     count : 1     cluid : 1613983195750425517
+ grid_index : 19 22 28     count : 67     cluid : 86826757976100198
+ grid_index : 19 21 27     count : 1     cluid : 86826757976100198
+ grid_index : 20 15 17     count : 60     cluid : 17769758303514395798
+ grid_index : 20 23 15     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 27     count : 59     cluid : 86826757976100198
+ grid_index : 19 21 16     count : 1     cluid : 1613983195750425517
+ grid_index : 20 14 21     count : 1     cluid : 1613983195750425517
+ grid_index : 19 13 24     count : 1     cluid : 1613983195750425517
+ grid_index : 20 6 31     count : 1     cluid : 1613983195750425517
+ grid_index : 19 22 26     count : 62     cluid : 86826757976100198
+ grid_index : 19 5 36     count : 172     cluid : 5458457760955147521
+ grid_index : 19 15 17     count : 59     cluid : 17769758303514395798
+ grid_index : 19 20 32     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 16     count : 63     cluid : 17769758303514395798
+ grid_index : 20 15 15     count : 66     cluid : 17769758303514395798
+ grid_index : 20 12 21     count : 1     cluid : 1613983195750425517
+ grid_index : 18 6 16     count : 1     cluid : 1613983195750425517
+ grid_index : 20 23 22     count : 1     cluid : 1613983195750425517
+ grid_index : 18 15 19     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 26     count : 54     cluid : 86826757976100198
+total_number : 1500  grid size : 31
 
-result -- 12_3 : 1
-result -- 16 : 497
-result -- 16_1 : 497
-result -- 12 : 517
-result -- 12_0 : 516
-result -- 6_2 : 477
-result -- 0_3 : 12
-result -- 6 : 477
-result -- 0 : 12
+result -- 13832791686237605363_3 : 1
+result -- 789606150780445772_1 : 497
+result -- 1613983195750425517_3 : 12
+result -- 1613983195750425517 : 12
+result -- 13832791686237605363_0 : 516
+result -- 13832791686237605363 : 517
+result -- 789606150780445772 : 497
+result -- 2474230288164832990_2 : 477
+result -- 2474230288164832990 : 477
 
-precent -- 0 : 1
-precent -- 6 : 1
-precent -- 16 : 1
-precent -- 12 : 0.998066
+precent -- 2474230288164832990 : 1
+precent -- 1613983195750425517 : 1
+precent -- 789606150780445772 : 1
+precent -- 13832791686237605363 : 0.998066
 
-minpts ----------- 48
- grid_index : 18 18 24     count : 1     cluid : 0
- grid_index : 19 13 24     count : 1     cluid : 0
- grid_index : 20 14 21     count : 1     cluid : 0
- grid_index : 18 15 19     count : 1     cluid : 0
- grid_index : 19 17 22     count : 1     cluid : 0
- grid_index : 19 15 17     count : 58     cluid : 6
- grid_index : 19 20 32     count : 1     cluid : 0
- grid_index : 20 15 16     count : 61     cluid : 6
- grid_index : 20 12 21     count : 1     cluid : 0
- grid_index : 18 6 16     count : 1     cluid : 0
- grid_index : 20 15 15     count : 64     cluid : 6
- grid_index : 18 22 26     count : 48     cluid : 12
- grid_index : 18 22 27     count : 62     cluid : 12
- grid_index : 20 6 31     count : 1     cluid : 0
- grid_index : 19 22 26     count : 64     cluid : 12
- grid_index : 19 5 36     count : 172     cluid : 16
- grid_index : 19 21 27     count : 1     cluid : 12
- grid_index : 19 22 28     count : 68     cluid : 12
- grid_index : 18 17 19     count : 1     cluid : 0
- grid_index : 19 5 35     count : 325     cluid : 16
- grid_index : 19 15 18     count : 65     cluid : 6
- grid_index : 20 24 21     count : 1     cluid : 0
- grid_index : 19 15 15     count : 64     cluid : 6
- grid_index : 19 22 25     count : 59     cluid : 12
- grid_index : 19 15 16     count : 55     cluid : 6
- grid_index : 20 15 18     count : 49     cluid : 6
- grid_index : 19 5 25     count : 1     cluid : 0
- grid_index : 19 22 27     count : 81     cluid : 12
- grid_index : 18 22 28     count : 61     cluid : 12
- grid_index : 18 22 25     count : 73     cluid : 12
- grid_index : 20 15 17     count : 61     cluid : 6
-total_number : 1500
+ grid_index : 20 15 17     count : 61     cluid : 2474230288164832990
+ grid_index : 18 22 25     count : 73     cluid : 13832791686237605363
+ grid_index : 18 22 28     count : 61     cluid : 13832791686237605363
+ grid_index : 19 22 27     count : 81     cluid : 13832791686237605363
+ grid_index : 19 5 25     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 18     count : 49     cluid : 2474230288164832990
+ grid_index : 19 15 16     count : 55     cluid : 2474230288164832990
+ grid_index : 19 22 25     count : 59     cluid : 13832791686237605363
+ grid_index : 18 18 24     count : 1     cluid : 1613983195750425517
+ grid_index : 19 17 22     count : 1     cluid : 1613983195750425517
+ grid_index : 18 15 19     count : 1     cluid : 1613983195750425517
+ grid_index : 20 14 21     count : 1     cluid : 1613983195750425517
+ grid_index : 19 13 24     count : 1     cluid : 1613983195750425517
+ grid_index : 20 6 31     count : 1     cluid : 1613983195750425517
+ grid_index : 19 22 26     count : 64     cluid : 13832791686237605363
+ grid_index : 19 5 36     count : 172     cluid : 789606150780445772
+ grid_index : 19 20 32     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 16     count : 61     cluid : 2474230288164832990
+ grid_index : 19 15 17     count : 58     cluid : 2474230288164832990
+ grid_index : 20 12 21     count : 1     cluid : 1613983195750425517
+ grid_index : 18 6 16     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 15     count : 64     cluid : 2474230288164832990
+ grid_index : 19 22 28     count : 68     cluid : 13832791686237605363
+ grid_index : 19 21 27     count : 1     cluid : 13832791686237605363
+ grid_index : 18 22 26     count : 48     cluid : 13832791686237605363
+ grid_index : 19 15 15     count : 64     cluid : 2474230288164832990
+ grid_index : 20 24 21     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 27     count : 62     cluid : 13832791686237605363
+ grid_index : 19 5 35     count : 325     cluid : 789606150780445772
+ grid_index : 18 17 19     count : 1     cluid : 1613983195750425517
+ grid_index : 19 15 18     count : 65     cluid : 2474230288164832990
+total_number : 1500  grid size : 28
 
-result -- 11_3 : 1
-result -- 13_1 : 500
-result -- 13 : 500
-result -- 11_0 : 513
-result -- 11 : 514
-result -- 4_2 : 480
-result -- 4 : 480
-result -- 0_3 : 9
-result -- 0 : 9
+result -- 891840777661082956_3 : 1
+result -- 2957985857319498496 : 500
+result -- 1613983195750425517_3 : 9
+result -- 2957985857319498496_1 : 500
+result -- 1613983195750425517 : 9
+result -- 891840777661082956_0 : 513
+result -- 891840777661082956 : 514
+result -- 9735916554072735201_2 : 480
+result -- 9735916554072735201 : 480
 
-precent -- 0 : 1
-precent -- 4 : 1
-precent -- 13 : 1
-precent -- 11 : 0.998055
+precent -- 9735916554072735201 : 1
+precent -- 2957985857319498496 : 1
+precent -- 1613983195750425517 : 1
+precent -- 891840777661082956 : 0.998055
 
-minpts ----------- 53
- grid_index : 19 13 24     count : 1     cluid : 0
- grid_index : 18 15 19     count : 1     cluid : 0
- grid_index : 19 17 22     count : 1     cluid : 0
- grid_index : 19 15 17     count : 62     cluid : 4
- grid_index : 19 20 32     count : 1     cluid : 0
- grid_index : 20 15 16     count : 56     cluid : 4
- grid_index : 20 12 21     count : 1     cluid : 0
- grid_index : 18 6 16     count : 1     cluid : 0
- grid_index : 20 15 15     count : 64     cluid : 4
- grid_index : 18 22 26     count : 48     cluid : 11
- grid_index : 18 22 27     count : 64     cluid : 11
- grid_index : 19 22 26     count : 59     cluid : 11
- grid_index : 19 5 36     count : 165     cluid : 13
- grid_index : 19 21 27     count : 1     cluid : 11
- grid_index : 19 22 28     count : 62     cluid : 11
- grid_index : 18 22 23     count : 1     cluid : 0
- grid_index : 19 22 25     count : 62     cluid : 11
- grid_index : 19 15 16     count : 61     cluid : 4
- grid_index : 18 17 19     count : 1     cluid : 0
- grid_index : 19 5 35     count : 335     cluid : 13
- grid_index : 19 15 18     count : 61     cluid : 4
- grid_index : 19 15 15     count : 60     cluid : 4
- grid_index : 20 15 18     count : 52     cluid : 4
- grid_index : 19 5 25     count : 1     cluid : 0
- grid_index : 19 22 27     count : 86     cluid : 11
- grid_index : 18 22 28     count : 58     cluid : 11
- grid_index : 18 22 25     count : 74     cluid : 11
- grid_index : 20 15 17     count : 64     cluid : 4
-total_number : 1500
+ grid_index : 20 15 17     count : 64     cluid : 9735916554072735201
+ grid_index : 18 22 25     count : 74     cluid : 891840777661082956
+ grid_index : 18 22 28     count : 58     cluid : 891840777661082956
+ grid_index : 19 22 27     count : 86     cluid : 891840777661082956
+ grid_index : 19 5 25     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 18     count : 52     cluid : 9735916554072735201
+ grid_index : 18 22 23     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 26     count : 48     cluid : 891840777661082956
+ grid_index : 18 6 16     count : 1     cluid : 1613983195750425517
+ grid_index : 20 12 21     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 15     count : 64     cluid : 9735916554072735201
+ grid_index : 19 15 16     count : 61     cluid : 9735916554072735201
+ grid_index : 19 22 25     count : 62     cluid : 891840777661082956
+ grid_index : 19 20 32     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 16     count : 56     cluid : 9735916554072735201
+ grid_index : 19 15 17     count : 62     cluid : 9735916554072735201
+ grid_index : 19 17 22     count : 1     cluid : 1613983195750425517
+ grid_index : 18 15 19     count : 1     cluid : 1613983195750425517
+ grid_index : 19 13 24     count : 1     cluid : 1613983195750425517
+ grid_index : 19 22 26     count : 59     cluid : 891840777661082956
+ grid_index : 19 5 36     count : 165     cluid : 2957985857319498496
+ grid_index : 19 21 27     count : 1     cluid : 891840777661082956
+ grid_index : 19 22 28     count : 62     cluid : 891840777661082956
+ grid_index : 18 22 27     count : 64     cluid : 891840777661082956
+ grid_index : 19 5 35     count : 335     cluid : 2957985857319498496
+ grid_index : 18 17 19     count : 1     cluid : 1613983195750425517
+ grid_index : 19 15 18     count : 61     cluid : 9735916554072735201
+ grid_index : 19 15 15     count : 60     cluid : 9735916554072735201
+total_number : 1500  grid size : 29
 
-result -- 13_1 : 484
-result -- 13 : 484
-result -- 10_0 : 514
-result -- 10 : 515
-result -- 4_2 : 494
-result -- 4 : 494
-result -- 10_3 : 1
-result -- 0_3 : 10
-result -- 0 : 10
+result -- 5832333510364503111_3 : 1
+result -- 2957985857319498496 : 484
+result -- 1613983195750425517_3 : 10
+result -- 2957985857319498496_1 : 484
+result -- 1613983195750425517 : 10
+result -- 5832333510364503111_0 : 514
+result -- 5832333510364503111 : 515
+result -- 9735916554072735201_2 : 494
+result -- 9735916554072735201 : 494
 
-precent -- 0 : 1
-precent -- 4 : 1
-precent -- 10 : 0.998058
-precent -- 13 : 1
+precent -- 9735916554072735201 : 1
+precent -- 2957985857319498496 : 1
+precent -- 1613983195750425517 : 1
+precent -- 5832333510364503111 : 0.998058
 
-minpts ----------- 51
- grid_index : 18 15 19     count : 1     cluid : 0
- grid_index : 18 23 32     count : 1     cluid : 0
- grid_index : 19 17 22     count : 1     cluid : 0
- grid_index : 19 15 17     count : 64     cluid : 4
- grid_index : 19 20 32     count : 1     cluid : 0
- grid_index : 20 15 16     count : 60     cluid : 4
- grid_index : 18 6 16     count : 1     cluid : 0
- grid_index : 20 15 15     count : 65     cluid : 4
- grid_index : 18 22 26     count : 48     cluid : 10
- grid_index : 18 22 27     count : 66     cluid : 10
- grid_index : 19 22 26     count : 62     cluid : 10
- grid_index : 19 7 29     count : 1     cluid : 0
- grid_index : 19 5 36     count : 163     cluid : 13
- grid_index : 19 21 27     count : 1     cluid : 10
- grid_index : 19 22 28     count : 69     cluid : 10
- grid_index : 20 21 20     count : 1     cluid : 0
- grid_index : 18 22 23     count : 1     cluid : 0
- grid_index : 19 22 25     count : 60     cluid : 10
- grid_index : 19 15 16     count : 65     cluid : 4
- grid_index : 18 17 19     count : 1     cluid : 0
- grid_index : 19 5 35     count : 321     cluid : 13
- grid_index : 19 15 18     count : 67     cluid : 4
- grid_index : 19 15 15     count : 55     cluid : 4
- grid_index : 20 15 18     count : 51     cluid : 4
- grid_index : 19 5 25     count : 1     cluid : 0
- grid_index : 19 22 27     count : 86     cluid : 10
- grid_index : 18 22 28     count : 50     cluid : 10
- grid_index : 18 22 25     count : 73     cluid : 10
- grid_index : 20 15 17     count : 67     cluid : 4
-total_number : 1500
+ grid_index : 20 15 17     count : 67     cluid : 9735916554072735201
+ grid_index : 18 22 25     count : 73     cluid : 5832333510364503111
+ grid_index : 18 22 28     count : 50     cluid : 5832333510364503111
+ grid_index : 19 22 27     count : 86     cluid : 5832333510364503111
+ grid_index : 19 5 25     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 18     count : 51     cluid : 9735916554072735201
+ grid_index : 19 15 15     count : 55     cluid : 9735916554072735201
+ grid_index : 19 17 22     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 26     count : 48     cluid : 5832333510364503111
+ grid_index : 18 6 16     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 15     count : 65     cluid : 9735916554072735201
+ grid_index : 19 15 16     count : 65     cluid : 9735916554072735201
+ grid_index : 19 22 25     count : 60     cluid : 5832333510364503111
+ grid_index : 19 20 32     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 16     count : 60     cluid : 9735916554072735201
+ grid_index : 19 15 17     count : 64     cluid : 9735916554072735201
+ grid_index : 18 23 32     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 27     count : 66     cluid : 5832333510364503111
+ grid_index : 18 15 19     count : 1     cluid : 1613983195750425517
+ grid_index : 19 22 26     count : 62     cluid : 5832333510364503111
+ grid_index : 19 7 29     count : 1     cluid : 1613983195750425517
+ grid_index : 19 5 36     count : 163     cluid : 2957985857319498496
+ grid_index : 19 21 27     count : 1     cluid : 5832333510364503111
+ grid_index : 19 22 28     count : 69     cluid : 5832333510364503111
+ grid_index : 18 22 23     count : 1     cluid : 1613983195750425517
+ grid_index : 20 21 20     count : 1     cluid : 1613983195750425517
+ grid_index : 19 5 35     count : 321     cluid : 2957985857319498496
+ grid_index : 18 17 19     count : 1     cluid : 1613983195750425517
+ grid_index : 19 15 18     count : 67     cluid : 9735916554072735201
+total_number : 1500  grid size : 29
 
-result -- 4_3 : 1
-result -- 12_1 : 478
-result -- 7_3 : 1
-result -- 7 : 508
-result -- 7_0 : 507
-result -- 4_2 : 507
-result -- 12 : 478
-result -- 4 : 508
-result -- 0_3 : 9
-result -- 0 : 9
+result -- 2474230288164832990_3 : 1
+result -- 9735916554072735201_2 : 507
+result -- 13832791686237605363 : 478
+result -- 9735916554072735201 : 508
+result -- 1613983195750425517_3 : 9
+result -- 1613983195750425517 : 9
+result -- 9735916554072735201_3 : 1
+result -- 13832791686237605363_1 : 478
+result -- 2474230288164832990_0 : 507
+result -- 2474230288164832990 : 508
 
-precent -- 0 : 1
-precent -- 7 : 0.998031
-precent -- 12 : 1
-precent -- 4 : 0.998031
+precent -- 1613983195750425517 : 1
+precent -- 13832791686237605363 : 1
+precent -- 9735916554072735201 : 0.998031
+precent -- 2474230288164832990 : 0.998031
 
-minpts ----------- 51
- grid_index : 18 25 20     count : 1     cluid : 0
- grid_index : 18 23 32     count : 1     cluid : 0
- grid_index : 18 13 25     count : 1     cluid : 0
- grid_index : 20 15 17     count : 69     cluid : 4
- grid_index : 20 15 15     count : 68     cluid : 4
- grid_index : 18 22 26     count : 48     cluid : 7
- grid_index : 18 22 27     count : 71     cluid : 7
- grid_index : 19 22 26     count : 67     cluid : 7
- grid_index : 19 21 27     count : 1     cluid : 7
- grid_index : 19 22 28     count : 67     cluid : 7
- grid_index : 19 7 29     count : 1     cluid : 0
- grid_index : 19 5 36     count : 164     cluid : 12
- grid_index : 20 21 20     count : 1     cluid : 0
- grid_index : 18 22 23     count : 1     cluid : 0
- grid_index : 19 22 25     count : 59     cluid : 7
- grid_index : 19 15 16     count : 68     cluid : 4
- grid_index : 20 14 17     count : 1     cluid : 4
- grid_index : 19 5 35     count : 314     cluid : 12
- grid_index : 20 12 28     count : 1     cluid : 0
- grid_index : 19 20 32     count : 1     cluid : 0
- grid_index : 20 15 16     count : 47     cluid : 4
- grid_index : 19 15 17     count : 76     cluid : 4
- grid_index : 19 15 18     count : 66     cluid : 4
- grid_index : 19 15 15     count : 59     cluid : 4
- grid_index : 20 15 18     count : 54     cluid : 4
- grid_index : 19 5 25     count : 1     cluid : 0
- grid_index : 19 22 27     count : 71     cluid : 7
- grid_index : 18 22 28     count : 53     cluid : 7
- grid_index : 18 22 25     count : 71     cluid : 7
+ grid_index : 18 22 25     count : 71     cluid : 2474230288164832990
+ grid_index : 18 22 28     count : 53     cluid : 2474230288164832990
+ grid_index : 19 22 27     count : 71     cluid : 2474230288164832990
+ grid_index : 19 5 25     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 18     count : 54     cluid : 9735916554072735201
+ grid_index : 19 15 15     count : 59     cluid : 9735916554072735201
+ grid_index : 19 15 18     count : 66     cluid : 9735916554072735201
+ grid_index : 19 22 26     count : 67     cluid : 2474230288164832990
+ grid_index : 19 22 28     count : 67     cluid : 2474230288164832990
+ grid_index : 19 21 27     count : 1     cluid : 2474230288164832990
+ grid_index : 20 15 15     count : 68     cluid : 9735916554072735201
+ grid_index : 18 22 27     count : 71     cluid : 2474230288164832990
+ grid_index : 20 15 17     count : 69     cluid : 9735916554072735201
+ grid_index : 18 13 25     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 26     count : 48     cluid : 2474230288164832990
+ grid_index : 18 23 32     count : 1     cluid : 1613983195750425517
+ grid_index : 18 25 20     count : 1     cluid : 1613983195750425517
+ grid_index : 19 5 36     count : 164     cluid : 13832791686237605363
+ grid_index : 19 7 29     count : 1     cluid : 1613983195750425517
+ grid_index : 20 21 20     count : 1     cluid : 1613983195750425517
+ grid_index : 18 22 23     count : 1     cluid : 1613983195750425517
+ grid_index : 19 22 25     count : 59     cluid : 2474230288164832990
+ grid_index : 19 15 16     count : 68     cluid : 9735916554072735201
+ grid_index : 20 14 17     count : 1     cluid : 9735916554072735201
+ grid_index : 19 5 35     count : 314     cluid : 13832791686237605363
+ grid_index : 20 12 28     count : 1     cluid : 1613983195750425517
+ grid_index : 19 20 32     count : 1     cluid : 1613983195750425517
+ grid_index : 20 15 16     count : 47     cluid : 9735916554072735201
+ grid_index : 19 15 17     count : 76     cluid : 9735916554072735201
